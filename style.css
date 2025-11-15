@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #09092f;
+    margin: 0;
+}
+
+#header {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #333;
+    color: rgb(254, 252, 252);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end; /* Pushes the scoreboard to the right */
+}
+
+#user-info {
+    font-size: 1.1em;
+    display: flex;
+    gap: 20px;
+}
+
+main {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgb(210, 80, 217);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* Quiz Styling */
+#options-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.option-btn {
+    padding: 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* --- Feedback Colors (Crucial for Red/Green animation) --- */
+.correct {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    animation: flash-correct 0.5s;
+}
+
+.incorrect {
+    background-color: #f44336; /* Red */
+    color: white;
+    animation: flash-incorrect 0.5s;
+}
+/* You can define keyframes for the animation if you want a flash effect */
